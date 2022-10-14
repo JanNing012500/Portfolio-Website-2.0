@@ -1136,6 +1136,9 @@ body{margin-top:0px;}
   z-index: 9999999;
   -webkit-transition: .9s;
   transition: .9s;
+  
+  
+
 }
 
 .preloader .loader {
@@ -1152,6 +1155,7 @@ body{margin-top:0px;}
           transform: translateY(-45%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  
 }
 
 .preloader .loader .loader-outter {
@@ -1201,7 +1205,7 @@ body{margin-top:0px;}
 }
 
 .preloader .loader .indicator svg polyline#front {
-  stroke: #1A76D1;
+  stroke: #000000;
   stroke-dasharray: 12, 36;
   stroke-dashoffset: 48;
   -webkit-animation: dash 1s linear infinite;
@@ -1216,7 +1220,7 @@ body{margin-top:0px;}
   height: 100%;
   width: 60%;
   z-index: -1;
-  background: #1A76D1;
+  background: #575858;
   -webkit-transition: .9s;
   transition: .9s;
 }

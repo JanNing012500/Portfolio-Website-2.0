@@ -224,13 +224,13 @@
 
   
   /**
-   * Portfolio details slider THIS IS WHERE YOU CHANGE THE SLIDE AUTOPLAY DELAY IT IS CURRENTLY 15000 WHICH MEANS 15 SECONDS
+   * Portfolio details slider
    */
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
-      delay: 15000,
+      delay: 5000,
       disableOnInteraction: false
     },
     pagination: {

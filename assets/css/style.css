@@ -229,7 +229,7 @@ h6 {
 
   background-repeat: no-repeat; 
 
-  background-position: 300px 0px; /* this moves the tft gameplay right by 300px and down by 0px */
+  background-position: 300px 0px; /* this moves the background by 300px and down by 0px */
 
   background-size: contain; /*keep this as contain*/
 }

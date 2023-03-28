@@ -6,6 +6,11 @@ body {
   color: #272829;
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 a {
   color: #0a74a5;
   text-decoration: none;

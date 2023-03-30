@@ -1318,11 +1318,10 @@ body{margin-top:0px;}
 .filters a.filter-active:before {
   content: "";
   position: absolute;
-  left: 15px;
-  right: 15px;
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 2px;
-  background-color: #149ddd;
 }
 
 .filters a:hover:before {
@@ -1408,3 +1407,78 @@ body{margin-top:0px;}
   background: #eceff2;
 }
 
+
+
+
+/* add a new class to represent the selected state of the filter */
+.filters a.filter-selected {
+  color: #149ddd;
+}
+
+.filters a.filter-selected:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+  height: 2px;
+
+}
+
+/* apply the selected class to the clicked filter element */
+.filters a.filter-active {
+  color: #149ddd;
+  position: relative;
+}
+
+.filters a.filter-active:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+  height: 2px;
+
+}
+
+/* remove the selected class from all other filter elements */
+.filters a:not(.filter-active):not(.filter-selected):hover,
+.filters a:not(.filter-active):not(.filter-selected):focus {
+  color: #149ddd;
+}
+
+/* apply the selected class to the clicked filter element and remove it from all others */
+.filters a.filter-active,
+.filters a.filter-selected {
+  color: #149ddd;
+}
+
+.filters a.filter-active:before,
+.filters a.filter-selected:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+  height: 2px;
+
+}
+
+.filters a:not(.filter-active):not(.filter-selected):hover:before,
+.filters a:not(.filter-active):not(.filter-selected):focus:before {
+  height: 0;
+}
+
+.filter-container {
+  overflow: hidden;
+}
+
+.filters a.filter-active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+
+}

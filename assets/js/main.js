@@ -215,10 +215,6 @@
   });
 
 */
-
-
-
-
   /**
    * Initiate portfolio lightbox 
    */
@@ -236,16 +232,6 @@
   });
 
 
-
-
-
-
-
-
-
-
-
-  
   /**
    * Portfolio details slider
    */
@@ -312,6 +298,7 @@
 })()
 
 
+
 /** preloader */ 
 $(window).on('load', function() {
   //for use in production please remove this setTimeOut
@@ -320,4 +307,19 @@ $(window).on('load', function() {
   }, 3000);
   //uncomment this line for use this snippet in production
   //	$('.preloader').addClass('preloader-deactivate');
+});
+
+
+
+
+
+const filters = document.querySelectorAll('.filters a');
+
+filters.forEach(filter => {
+  filter.addEventListener('click', event => {
+    event.preventDefault();
+    filters.forEach(f => f.classList.remove('filter-selected'));
+    filter.classList.add('filter-selected');
+    // TODO: update the displayed projects based on the selected filter
+  });
 });

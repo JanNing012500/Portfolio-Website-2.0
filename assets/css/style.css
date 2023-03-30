@@ -1522,3 +1522,87 @@ body{margin-top:0px;}
     display: block;
   }
 }
+
+/*
+ CSS for the main interaction
+*/
+.expanding-box > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.expanding-box .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.expanding-box > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.expanding-box label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+.expanding-box {
+  max-width: 800px; /* width of expandable box */
+  margin-bottom: 1em;
+}
+
+.expanding-box > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+}
+
+.expanding-box .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.expanding-box label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #e8e8e8;
+}
+
+.expanding-box label:hover,
+.expanding-box label:focus {
+  background: #d8d8d8;
+}
+
+.expanding-box .handle label:before {
+  font-family: 'fontawesome';
+  content: "\f054";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: middle;
+}
+
+.expanding-box > input[type="checkbox"]:checked ~ .handle label:before {
+  content: "\f078";
+}
+
+
+/*
+ Demo purposes only
+*/
+
+
+.expanding-box-container {
+  max-width: 65em;
+}
+
+.expanding-box-container p:last-child {
+  margin-bottom: 0;
+}

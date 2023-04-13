@@ -153,32 +153,7 @@
     })
   }
 
-  // window.addEventListener('load', () => {
-  //   let portfolioContainer = select('.portfolio-container');
-  //   if (portfolioContainer) {
-  //     let portfolioIsotope = new Isotope(portfolioContainer, {
-  //       itemSelector: '.portfolio-item'
-  //     });
 
-  //     let portfolioFilters = select('#portfolio-flters li', true);
-
-  //     on('click', '#portfolio-flters li', function(e) {
-  //       e.preventDefault();
-  //       portfolioFilters.forEach(function(el) {
-  //         el.classList.remove('filter-active');
-  //       });
-  //       this.classList.add('filter-active');
-
-  //       portfolioIsotope.arrange({
-  //         filter: this.getAttribute('data-filter')
-  //       });
-  //       portfolioIsotope.on('arrangeComplete', function() {
-  //         AOS.refresh()
-  //       });
-  //     }, true);
-  //   }
-
-  // });
 
     window.addEventListener('load', () => {
       let portfolioContainer = select('#portfolio-grid');
@@ -310,16 +285,3 @@ $(window).on('load', function() {
 });
 
 
-
-
-
-const filters = document.querySelectorAll('.filters a');
-
-filters.forEach(filter => {
-  filter.addEventListener('click', event => {
-    event.preventDefault();
-    filters.forEach(f => f.classList.remove('filter-selected'));
-    filter.classList.add('filter-selected');
-    // TODO: update the displayed projects based on the selected filter
-  });
-});

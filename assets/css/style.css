@@ -1295,38 +1295,6 @@ body{margin-top:0px;}
 }
 
 
-.filters a {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.filters a:hover,
-.filters a.filter-active {
-  color: #149ddd;
-}
-
-.filters a:hover:before,
-.filters a.filter-active:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-}
-
-.filters a:hover:before {
-  height: 0;
-}
 
 .item {
   border: none;

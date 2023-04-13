@@ -155,32 +155,44 @@
 
 
 
-    window.addEventListener('load', () => {
-      let portfolioContainer = select('#portfolio-grid');
-      if (portfolioContainer) {
-        let portfolioIsotope = new Isotope(portfolioContainer, {
-          itemSelector: '.item',
+  window.addEventListener('load', () => {
+    let portfolioContainer = select('#portfolio-grid');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.item',
+      });
+  
+      let portfolioFilters = select('#filters a', true);
+  
+      on('click', '#filters a', function(e) {
+        e.preventDefault();
+  
+        // Remove 'filter-selected' class from 'Featured' filter link
+        select('#filters a[data-filter=".feature"]').classList.remove('filter-selected');
+  
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
         });
+        this.classList.add('filter-active');
   
-        let portfolioFilters = select('#filters a', true);
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
   
-        on('click', '#filters a', function(e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function(el) {
-            el.classList.remove('active');
-          });
-          this.classList.add('active');
-  
-          portfolioIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
-          portfolioIsotope.on('arrangeComplete', function() {
-            AOS.refresh()
-          });
-        }, true);
-      }
-  
-    });
+      // Add 'filter-selected' class to 'Featured' filter link on page load
+      select('#filters a[data-filter=".feature"]').classList.add('filter-active', 'filter-selected');
+      portfolioIsotope.arrange({
+        filter: '.feature'
+      });
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+    }
+  });
 /*
 
    Initiate portfolio lightbox 

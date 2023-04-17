@@ -87,9 +87,7 @@
                   <img src="https://i.imgur.com/SOqbhXg.png" alt="">
                 </div>
 
-                <div class="swiper-slide">
-                  <img src="https://i.imgur.com/a86D3j8.png" alt="">
-                </div>
+
 
               </div>
               <div class="swiper-pagination"></div>
@@ -123,27 +121,28 @@
             
           </div>
         <h2>Overview</h2>
-        <h5>This is a collection of projects created for my <b>Game Design Experience course (CMPM120)</b>, where I learned concrete programming and collaboration skills required to make a digital game from start to finish. These projects demonstrate my ability to develop engaging and challenging games while working collaboratively with others to achieve design goals.</h5>
+        <h5>This is a collection of projects created for my <b>Game Design Experience course (CMPM120)</b>, where I learned concrete programming and collaboration skills required to make a digital game from start to finish. These projects demonstrate my ability to develop engaging and challenging games while working collaboratively with others to achieve design goals.<br><br><b><i>These games are playable in browser/mobile so feel free to give them a try!</i></b></h5>
         <br>
-        <b><h2>Galaxy Blitz</h2></b>
+        <b><h2><b>Galaxy Blitz</b> - <small><small>Solo Project</small></small></h2></b>
         <i>Collect powerups, max stats, and enter Blitz!</i><br>
-        <font size="+1"><b>Solo Project</b></font>
-        <br>
-        <iframe src="https://janning012500.github.io/GalaxyBlitz/?GalaxyBlitz" style="width:70%; height:600px;"></iframe>
+
+        <a><img class="img-fluid" src="https://i.imgur.com/a86D3j8.png" width="803" height="600"/></a>
+          <br>
+        <iframe src="https://janning012500.github.io/GalaxyBlitz/?GalaxyBlitz" style="width:62%; height:600px;"></iframe>
         <br><br>
         <font size="+1"><p>
           <b>Galaxy Blitz is an arcade-style shooter game</b> <i>featuring a side-to-side movement controlled by a single button</i> that requires players to think and react quickly in order to achieve a high score.
           <br><br>
-          To stick to the challenge of <b><i>only</i> using 1 button</b>, I didn't want to cop out and give players control of their ship using their mouse.<br> I instead opted for an <b>automatic moving ship which the players can press and hold in order to stop and change direction.</b>
-          <br><br>I wanted to add a <b>progression system</b> to stand out and give an element of replayability and challenge for the player. This progression system also slowly speeds up the spawnrate of enemies and speed of the game, and as the player collects power-ups, both their <b>bullet size and rate of fire increase</b>.
-          Once players collect enough power-ups, they enter <b>Blitz Time</b>, which gives them a <i>score multiplier and an extra life.</i> 
+          In order to stay true to the challenge of <b>using only one button</b>, I made a conscious decision to avoid the easy way out of allowing players to control their ship with their mouse. Instead, I chose to implement an <b><i>automatic moving ship</i></b> that players can bring to a halt and change direction by simply <b>pressing and holding the same button</b>.
+          <br><br>I wanted to add a <b>progression system</b> to stand out and give an element of replayability and challenge for the player. This system also slowly speeds up the spawnrate of enemies and speed of the game, and as the player collects power-ups, both their <b>bullet size and rate of fire increase</b>.
+          <br><br>Once players collect enough power-ups, they enter <b>Blitz Time</b>, which gives them a <i>score multiplier and an extra life.</i> 
           Blitz time ends when the player gets hit, 
-          and after initial playtesting, I found thay players would often die right after blitz mode ended as there were ships still being spawned, so I added a full-screen map clear mechanic that triggers when players lose a life to give players a few split seconds to reposition themselves.
+          and after initial playtesting, I found thay players would often die right after blitz mode ended as there were ships still being spawned, so I added a <b>full-screen map clear</b> mechanic that triggers when players lose blitz mode to give them a chance to reposition themselves.
         </p></font>
 
         <br>
 
-        <h2>Orbital Disco</h2>
+        <h2><b>Orbital Disco</b> - <small><small>Team Project</small></small></h2>
         <i>Reach your dance partner!</i><br>
         <b>Team Size : 6</b><br>
         <i><b>Contributions</b>: Movement mechanics, Sprite animations, Sfx</i>
@@ -151,11 +150,11 @@
         <iframe src="https://janning012500.github.io/OrbitalDisco/?dancinggame" style="width:70%; height:600px;"></iframe>
         <br><br>
         <font size="+1"><p>
-          Orbital Disco challenges players to <i>maneuver around the other dancer to reach their dance partner on the other side of the dancefloor</i>. This game features a <b>charged press and hold mechanic</b> that determines how far the player dances. Direction is based on the position of the <b>clockwise-orbiting indicator</b> circling the player. With these two factors combined, players can precisely control both the distance and direction of their character using a single button. <i>Other dancers are procedurally spawned</i> and increase in number after each level.       
+          Orbital Disco challenges players to <i>maneuver around the other dancer to reach their dance partner on the other side of the dancefloor</i>.<br> This game features a <b>charged press and hold mechanic</b> that determines how far the player dances. Direction is based on the position of the <i>clockwise-orbiting indicator</i> circling the player. With these two factors combined, players can precisely control both the distance and direction of their character using a single button. <i>Other dancers are procedurally spawned</i> and increase in number after each level.       
         </p></font>
         <br>
 
-        <h2>Humanity's Demise</h2>
+        <h2><b>Humanity's Demise</b> - <small><small>Partner Project</small></small></h2>
         <i>Destroy the Humans!</i><br>
         <b>Team Size : 2</b><br>
         <i><b>Contributions</b>: Gameplay Programming</i>
@@ -164,9 +163,9 @@
         <br><br>
         <font size="+1"><p>
           Humanity's Demise is another <b>arcade-style shooter</b> game where players aim to destroy mankind.  
-          As the game progresses, both the player and the enemy become stronger. 
-          After each wave, both the player and enemies gain more Health Points, faster shooting speed but the player has one advantage: <i>more missiles which deal significant damage!</i>
-          Upon losing a life, players will send out a wave of bullets, but as the enemies become stronger after each round, these waves will no longer be as effective.
+          <br>As the game progresses, both the player and the enemy become stronger. 
+          After each wave, both the player and enemies gain more Health Points, faster shooting speed but the player has one advantage, they can <b>press and hold</b> to shoot a <b>large missiles which deals significant damage!</b>
+          <br>Upon losing a life, players will send out a wave of bullets, but as the enemies become <i>stronger after each round</i>, the bullets will no longer be as effective.
         </p></font>
 
       </div>
